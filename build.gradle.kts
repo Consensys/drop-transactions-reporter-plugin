@@ -97,13 +97,7 @@ spotless {
 }
 
 // auto-generate project version (semver) based on tags
-jgitver { nonQualifierBranches = "main" }
-
-tasks.register("printVersion") {
-  group = "Help"
-  description = "Prints the project version"
-  doLast { println("Version: ${project.version}") }
-}
+jgitver { nonQualifierBranches = "master,main" }
 
 tasks.jar {
   manifest {
@@ -127,7 +121,7 @@ jreleaser {
   dependsOnAssemble.set(true)
   gitRootSearch.set(true)
   distributions {
-    create("besu-plugin") {
+    create("drop-transactions-reporter-plugin") {
       distributionType.set(Distribution.DistributionType.SINGLE_JAR)
       artifact {
         path.set(layout.buildDirectory.file("libs/{{distributionName}}-{{projectVersion}}.jar"))
