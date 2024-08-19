@@ -97,13 +97,7 @@ spotless {
 }
 
 // auto-generate project version (semver) based on tags
-jgitver { nonQualifierBranches = "main" }
-
-tasks.register("printVersion") {
-  group = "Help"
-  description = "Prints the project version"
-  doLast { println("Version: ${project.version}") }
-}
+jgitver { nonQualifierBranches = "master,main" }
 
 tasks.jar {
   manifest {
