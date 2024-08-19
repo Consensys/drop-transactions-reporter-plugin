@@ -33,6 +33,11 @@ The plugin jar will be available at `build/libs/`.
 ## Usage
 
 Drop the `drop-transactions-reporter-plugin-<version>.jar` in the `/plugins` folder under Besu installation.
+The plugin will expose following additional cli options:
+```shell
+--plugin-drop-transaction-reporter-endpoint=<URI>
+                                URI to report drop transactions
+```
 
 ## License
 `SPDX-License-Identifier: Apache-2.0`
