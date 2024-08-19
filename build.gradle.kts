@@ -127,7 +127,7 @@ jreleaser {
   dependsOnAssemble.set(true)
   gitRootSearch.set(true)
   distributions {
-    create("besu-plugin") {
+    create("drop-transactions-reporter-plugin") {
       distributionType.set(Distribution.DistributionType.SINGLE_JAR)
       artifact {
         path.set(layout.buildDirectory.file("libs/{{distributionName}}-{{projectVersion}}.jar"))
